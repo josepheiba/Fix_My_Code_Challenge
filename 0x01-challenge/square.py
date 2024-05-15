@@ -41,7 +41,7 @@ if __name__ == "__main__":
     """
     Main function to demonstrate usage of the Square class.
     """
-    s = Square(width=12, width=9)
+    s = Square(width=12, height=9)
     print(s)
     print(s.area_of_my_square())
     print(s.perimeter_of_my_square())
