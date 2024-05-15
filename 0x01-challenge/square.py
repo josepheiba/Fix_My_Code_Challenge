@@ -11,6 +11,7 @@ class Square:
     Attributes:
         width (int): The width of the square.
     """
+    width = 0
 
     def __init__(self, **kwargs):
         """
@@ -29,7 +30,7 @@ class Square:
         Returns:
             int: The area of the square.
         """
-        return self.width * self.width
+        return self.width * 2
 
     def perimeter_of_my_square(self):
         """
