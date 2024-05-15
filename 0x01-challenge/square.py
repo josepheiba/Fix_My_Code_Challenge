@@ -1,32 +1,60 @@
 #!/usr/bin/python3
-""" code of square """
+"""
+Code defining square class and its methods for calculating area and perimeter.
+"""
 
 
-class square():
-    """ class of square """
-    width = 0
+class Square:
+    """
+    A class representing a square.
 
-    def __init__(self, *args, **kwargs):
-        """ square init """
+    Attributes:
+        width (int): The width of the square.
+    """
+
+    def __init__(self, **kwargs):
+        """
+        Initializes the square with specified attributes.
+
+        Args:
+            **kwargs: Arbitrary keyword arguments to set attributes.
+        """
         for key, value in kwargs.items():
             setattr(self, key, value)
 
     def area_of_my_square(self):
-        """ Area of the square """
+        """
+        Calculates the area of the square.
+
+        Returns:
+            int: The area of the square.
+        """
         return self.width * self.width
 
     def perimeter_of_my_square(self):
-        """ Perimeter of the square """
+        """
+        Calculates the perimeter of the square.
+
+        Returns:
+            int: The perimeter of the square.
+        """
         return self.width * 4
 
     def __str__(self):
-        """ return string """
+        """
+        Returns a string representation of the square.
+
+        Returns:
+            str: String representation of the square's width.
+        """
         return "{}/{}".format(self.width, self.width)
 
 
 if __name__ == "__main__":
-    """ main function """
-    s = square(width=12)
+    """
+    Main function to demonstrate usage of the Square class.
+    """
+    s = Square(width=12)
     print(s)
     print(s.area_of_my_square())
     print(s.perimeter_of_my_square())
